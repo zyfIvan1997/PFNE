@@ -513,25 +513,6 @@ int main(int argc, const char** argv) {
     std::wcout << ngram_input[i] << std::endl;
   }
 
-/////////////////////////////////////////////////////////////////////////////////////
-
-
-  // Extract frequently-used n-grams using lossy counting algorithm
-//   std::vector<std::wstring> vocabulary;
-//   std::vector<int64_t> count_vocabulary;
-
-// std::vector<int64_t> size_vocabulary_list;
-
-//   for (auto& s : size_vocabulary_str_list) {
-//     size_vocabulary_list.push_back(std::stoi(s));
-//   }
-
-//   LossyCountingNgram lcn(ws, size_vocabulary_list, n_cores,
-//                          epsilon_lossycounting, support_threshold_lossycounting, debug);
-//   lcn.extract_ngram();
-//   lcn.to_csv(dir_output);
-//   lcn.get_ngram_frequency(vocabulary, count_vocabulary);
-
   // Word embedding using PFNE
   PFNE w2vsb(ws, ngram_input, ngram_count_int_input,
                        size_window, dim_embedding, debug, seed,
